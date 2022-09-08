@@ -1,0 +1,40 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
+  <TemplateData>
+    <DefaultName>Entity</DefaultName>
+    <Name>Mediatr Service bootstrapper</Name>
+    <Description>Creates Mediatr Crud</Description>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>10</SortOrder>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <CustomParameters>
+      <CustomParameter Name="$servicename$" Value="$fileinputname$"/>
+      <CustomParameter Name="$domainnamespace$" Value="JobOpportunities.Domain"/>
+      <CustomParameter Name="$datanamespace$" Value="JobOpportunities.Data"/>
+    </CustomParameters>
+    <Folder Name="Features">
+      <Folder Name="REPLACE">
+      	<Folder Name="Models">
+      		<ProjectItem SubType="Code" TargetFileName="Get$fileinputname$Response.cs" ReplaceParameters="true">GetResponse.cs</ProjectItem>
+      		<ProjectItem SubType="Code" TargetFileName="Get$fileinputname$sResponse.cs" ReplaceParameters="true">GetAllResponse.cs</ProjectItem>
+      	</Folder>
+      	<Folder Name="Queries">
+      		<ProjectItem SubType="Code" TargetFileName="Get$fileinputname$Query.cs" ReplaceParameters="true">GetQuery.cs</ProjectItem>
+      		<ProjectItem SubType="Code" TargetFileName="Get$fileinputname$sQuery.cs" ReplaceParameters="true">GetAllQuery.cs</ProjectItem>
+      	</Folder>
+      	<Folder Name="Commands">
+      		<ProjectItem SubType="Code" TargetFileName="Create$fileinputname$Command.cs" ReplaceParameters="true">CreateCommand.cs</ProjectItem>
+      		<ProjectItem SubType="Code" TargetFileName="Update$fileinputname$Command.cs" ReplaceParameters="true">UpdateCommand.cs</ProjectItem>
+      	</Folder>
+      	<Folder Name="Validators">
+      		<ProjectItem SubType="Code" TargetFileName="Update$fileinputname$Validator.cs" ReplaceParameters="true">UpdateValidator.cs</ProjectItem>
+      		<ProjectItem SubType="Code" TargetFileName="Create$fileinputname$Validator.cs" ReplaceParameters="true">CreateValidator.cs</ProjectItem>
+      	</Folder>
+      </Folder>
+    </Folder>
+    <Folder Name="Profiles">
+    		<ProjectItem SubType="Code" TargetFileName="$fileinputname$Profile.cs" ReplaceParameters="true">EntityProfile.cs</ProjectItem>
+    </Folder>
+  </TemplateContent>
+</VSTemplate>

@@ -1,0 +1,25 @@
+{
+  "name": "crud-template-generator",
+  "version": "1.0.0",
+  "description": "un template para generar templates",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "zip": "npm-build-zip --source=src/ --name=VSTemplateCrud --info=true && copy-files-from-to"
+  },
+  "copyFiles": [
+    {
+      "from": "crud-template-generator_1.0.0.VSTemplateCrud.zip",
+      "to": "./Users/NBologna/OneDrive - ENDAVA/Documents/Visual Studio 2022/Templates/ItemTemplates/C#"
+    }
+  ],
+  "author": "Nicolas Bologna",
+  "license": "MIT",
+  "devDependencies": {
+    "npm-build-zip": "^1.0.3"
+  },
+  "dependencies": {
+    "copy-files-from-to": "^3.2.2",
+    "escape-path-with-spaces": "^1.0.2"
+  }
+}
